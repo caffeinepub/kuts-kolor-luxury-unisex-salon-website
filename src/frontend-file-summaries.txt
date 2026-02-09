@@ -1,0 +1,16 @@
+{
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup for 5 pages (Home, About, Services, Gallery, Contact) using a shared layout.",
+  "frontend/src/components/layout/SiteLayout.tsx": "Shared layout wrapper that renders the persistent header, main content outlet, and footer across all pages.",
+  "frontend/src/components/layout/Header.tsx": "Responsive navigation header with salon branding, desktop/mobile menu, and active route highlighting.",
+  "frontend/src/components/layout/Footer.tsx": "Site footer with contact information, location, booking link, and attribution with UTM tracking.",
+  "frontend/src/components/branding/Section.tsx": "Reusable section layout components for consistent spacing and heading styles across pages.",
+  "frontend/src/pages/HomePage.tsx": "Home page with hero section, service highlights emphasizing hair treatments and colour, and CTAs for booking and calling.",
+  "frontend/src/pages/AboutPage.tsx": "About page with salon description, location context, areas served, and commitment sections.",
+  "frontend/src/pages/ServicesPage.tsx": "Services page with grouped sections for Hair (featuring treatments and colour), Skin, and Nail services.",
+  "frontend/src/pages/GalleryPage.tsx": "Gallery page with responsive image grid and lightbox modal for preview using static generated assets.",
+  "frontend/src/pages/ContactPage.tsx": "Contact page with full address, phone, hours, location context, and booking link to dingg.app.",
+  "frontend/src/index.css": "Global styles with warm neutral and gold accent OKLCH color system for luxury salon aesthetic in light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration with custom warm color palette, Playfair Display serif font, and extended design tokens.",
+  "frontend/index.html": "HTML entry point with updated meta tags, title, and Google Fonts for Inter and Playfair Display.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file for React Query hooks (empty as backend has no methods)."
+}

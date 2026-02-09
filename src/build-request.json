@@ -1,0 +1,213 @@
+{
+  "kind": "build_request",
+  "title": "Aesthetic 5-page website for KUTS & KOLOR Luxury Unisex Salon",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a 5-page marketing website for “KUTS & KOLOR Luxury Unisex Salon” with top-level navigation and routes for: Home, About, Services, Gallery, and Contact.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "build aesthetic 5 pages website"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The site has 5 distinct pages: Home, About, Services, Gallery, Contact.",
+        "A persistent header/nav allows navigating to all 5 pages.",
+        "The active page/route is reflected in the URL and renders without full page reload."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Apply a single, coherent visual theme suitable for a luxury unisex salon (colors, typography, spacing, imagery style) and enforce it consistently across all pages. Do not use a blue/purple default palette.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "build aesthetic 5 pages website"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All pages share the same design system (type scale, button styles, section spacing, and card styles).",
+        "The palette is not primarily blue/purple and feels “luxury salon” appropriate.",
+        "Layouts are responsive for mobile, tablet, and desktop."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Home page content must prominently present: salon name, a short tagline/value proposition derived from the provided description, key service categories (hair, skin, nails; plus emphasis on hair treatment and hair colour), and a clear call-to-action to contact/call and/or book via dingg.app (as an external link).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Products and services: dingg.app",
+          "A perfect destination for grooming and beauty services, which provides you expertise services in hair, skin and nails. Expertise into hair treatment and hair colour. We believe in quality services and affordable prices."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Home page shows “KUTS & KOLOR Luxury Unisex Salon” prominently above the fold.",
+        "Home page includes service category highlights: Hair, Skin, Nails, and explicitly mentions hair treatments and hair colour expertise.",
+        "Home page contains at least one CTA that either initiates a phone call on mobile and/or links out to dingg.app."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "About page must include the provided salon description text (edited only for grammar/clarity while preserving meaning) and key facts: location area (Mumbai Central, Navjivan Society), and “Areas served: India”.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Kuts and kolor luxury unisex salon at Mumbai Central, Navjivan Society is a 600 sq ft salon...",
+          "Areas served: India"
+        ]
+      },
+      "acceptanceCriteria": [
+        "About page includes an “About” section with the provided description (meaning preserved).",
+        "About page clearly states Mumbai Central / Navjivan Society location context.",
+        "About page includes “Areas served: India”."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Services page must present salon services grouped into clear sections for Hair, Skin, and Nails, including a highlighted section for Hair Treatments and Hair Colour, with tasteful UI (cards/list with brief descriptions).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "provides you expertise services in hair, skin and nails. Expertise into hair treatment and hair colour."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Services are grouped into Hair / Skin / Nails.",
+        "Hair Treatments and Hair Colour appear as emphasized offerings within Hair.",
+        "Each service group has readable, scannable presentation on mobile and desktop."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Gallery page must display a responsive image grid (with lightbox or modal preview) using generated placeholder salon imagery (until real photos are provided).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "build aesthetic 5 pages website"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Gallery page shows a responsive grid that adapts column count by viewport size.",
+        "Clicking/tapping an image opens a larger preview (modal/lightbox).",
+        "Gallery images are loaded from static assets under frontend/public/assets/generated (not from the backend)."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Contact page must display the full address, phone number (click-to-call), hours (“Open · Closes 9 pm”), and location context (“Navjivan Commercial Premises CHS”, “Mumbai Central”). Include an external link for booking/services to dingg.app.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Located in: Navjivan Commercial Premises CHS",
+          "Address: Shop no.9, ground floor ,3, Lamington Rd, Navjeevan Society, Navjivan Area, Dalal Estate, Mumbai Central, Mumbai, Maharashtra 400008",
+          "Hours: Open · Closes 9\u001fpm",
+          "Phone: 091678 60528",
+          "Products and services: dingg.app"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Contact page shows the full provided address exactly (allowing minor punctuation normalization only).",
+        "Phone number is rendered as a clickable tel: link and displayed as “091678 60528”.",
+        "Hours are displayed as “Open · Closes 9 pm” (use English formatting).",
+        "There is an external link to dingg.app labeled clearly (e.g., “Book on dingg.app”)."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Add shared layout components (header/nav and footer) including consistent branding and key contact info (phone + area/location) across all pages.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Salon Name: KUTS & KOLOR Luxury Unisex Salon",
+          "Phone: 091678 60528",
+          "Mumbai Central"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Header appears on all pages and includes site name/brand and navigation links.",
+        "Footer appears on all pages and includes phone number and a short location line (Mumbai Central, Mumbai).",
+        "Layout remains usable on small screens (nav collapses or stacks appropriately)."
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Create and integrate required static images as generated assets under frontend/public/assets/generated, and use them consistently (hero image, gallery placeholders, and simple service category visuals).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "build aesthetic 5 pages website"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All required generated images exist under frontend/public/assets/generated.",
+        "Home uses a hero image from the generated assets.",
+        "Gallery uses generated images; no backend image serving is introduced.",
+        "Service sections include simple visuals (icons/illustrations) sourced from generated assets."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use English for any user-facing text.",
+    "Do not edit files under frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, or any files under frontend/src/components/ui (compose them instead).",
+    "No third-party authentication beyond Internet Identity (not required for this website).",
+    "Do not introduce external databases or non-Motoko backend services."
+  ],
+  "nonGoals": [
+    "Implementing online payments or checkout.",
+    "Building a real-time chat or messaging feature.",
+    "Integrating third-party social logins or external auth providers.",
+    "Adding a CMS/admin panel for content editing.",
+    "Implementing a backend-driven booking flow (only an external link to dingg.app is required)."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Luxury salon hero background with warm neutral tones and subtle premium ambiance (salon-hero.dim_1920x1080.png)",
+      "Minimal line icon set as a single sprite/strip for Hair, Skin, Nails in a consistent style (service-icons-strip.dim_1200x300.png)",
+      "Gallery placeholder image 1: premium salon interior scene, neutral tones (gallery-01.dim_1200x900.png)",
+      "Gallery placeholder image 2: hair coloring tools flat-lay, premium aesthetic (gallery-02.dim_1200x900.png)",
+      "Gallery placeholder image 3: manicure/nail care close-up, clean minimal style (gallery-03.dim_1200x900.png)",
+      "Gallery placeholder image 4: skincare/spa setup, calm luxury look (gallery-04.dim_1200x900.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.625rem;
+        
+        /* Warm neutral palette with gold accent for luxury salon */
+        --background: 0.98 0.005 40;
+        --foreground: 0.20 0.01 40;
+        
+        --card: 1 0 0;
+        --card-foreground: 0.20 0.01 40;
+        
+        --popover: 1 0 0;
+        --popover-foreground: 0.20 0.01 40;
+        
+        /* Rich bronze/gold primary */
+        --primary: 0.55 0.15 50;
+        --primary-foreground: 0.98 0.005 40;
+        
+        /* Warm secondary */
+        --secondary: 0.95 0.01 40;
+        --secondary-foreground: 0.20 0.01 40;
+        
+        --muted: 0.96 0.008 40;
+        --muted-foreground: 0.50 0.01 40;
+        
+        --accent: 0.94 0.015 40;
+        --accent-foreground: 0.20 0.01 40;
+        
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        
+        --border: 0.90 0.008 40;
+        --input: 0.90 0.008 40;
+        --ring: 0.55 0.15 50;
+        
+        /* Warm color palette */
+        --warm-50: 0.98 0.01 40;
+        --warm-100: 0.96 0.015 40;
+        --warm-200: 0.92 0.02 40;
+        
+        /* Gold accent color */
+        --accent-gold: 0.55 0.15 50;
+        
+        --chart-1: 0.646 0.222 41.116;
+        --chart-2: 0.6 0.118 184.704;
+        --chart-3: 0.398 0.07 227.392;
+        --chart-4: 0.828 0.189 84.429;
+        --chart-5: 0.769 0.188 70.08;
+        
+        --sidebar: 0.985 0 0;
+        --sidebar-foreground: 0.145 0 0;
+        --sidebar-primary: 0.55 0.15 50;
+        --sidebar-primary-foreground: 0.985 0 0;
+        --sidebar-accent: 0.97 0 0;
+        --sidebar-accent-foreground: 0.205 0 0;
+        --sidebar-border: 0.922 0 0;
+        --sidebar-ring: 0.708 0 0;
+    }
+
+    .dark {
+        --background: 0.15 0.01 40;
+        --foreground: 0.95 0.005 40;
+        
+        --card: 0.18 0.01 40;
+        --card-foreground: 0.95 0.005 40;
+        
+        --popover: 0.20 0.01 40;
+        --popover-foreground: 0.95 0.005 40;
+        
+        /* Brighter gold for dark mode */
+        --primary: 0.65 0.18 50;
+        --primary-foreground: 0.15 0.01 40;
+        
+        --secondary: 0.25 0.015 40;
+        --secondary-foreground: 0.95 0.005 40;
+        
+        --muted: 0.25 0.015 40;
+        --muted-foreground: 0.65 0.01 40;
+        
+        --accent: 0.30 0.02 40;
+        --accent-foreground: 0.95 0.005 40;
+        
+        --destructive: 0.704 0.191 22.216;
+        --destructive-foreground: 0.95 0.005 40;
+        
+        --border: 0.30 0.015 40;
+        --input: 0.30 0.015 40;
+        --ring: 0.65 0.18 50;
+        
+        /* Warm colors for dark mode */
+        --warm-50: 0.25 0.015 40;
+        --warm-100: 0.22 0.02 40;
+        --warm-200: 0.20 0.025 40;
+        
+        /* Gold accent for dark mode */
+        --accent-gold: 0.65 0.18 50;
+        
+        --chart-1: 0.488 0.243 264.376;
+        --chart-2: 0.696 0.17 162.48;
+        --chart-3: 0.769 0.188 70.08;
+        --chart-4: 0.627 0.265 303.9;
+        --chart-5: 0.645 0.246 16.439;
+        
+        --sidebar: 0.18 0.01 40;
+        --sidebar-foreground: 0.95 0.005 40;
+        --sidebar-primary: 0.65 0.18 50;
+        --sidebar-primary-foreground: 0.15 0.01 40;
+        --sidebar-accent: 0.25 0.015 40;
+        --sidebar-accent-foreground: 0.95 0.005 40;
+        --sidebar-border: 0.30 0.015 40;
+        --sidebar-ring: 0.50 0.01 40;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+}

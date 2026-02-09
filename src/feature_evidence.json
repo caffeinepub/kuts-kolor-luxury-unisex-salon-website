@@ -1,0 +1,182 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-5-page-marketing-website-for-kuts-kolor-luxury-unisex-salon-with-top-level-navigation-and-routes-for-home-about-services-gallery-and-contact",
+      "featureTitle": "Create a 5-page marketing website for “KUTS & KOLOR Luxury Unisex Salon” with top-level navigation and routes for: Home, About, Services, Gallery, and Contact.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/App.tsx",
+        "frontend/src/components/layout/SiteLayout.tsx",
+        "frontend/src/pages/AboutPage.tsx",
+        "frontend/src/pages/ContactPage.tsx",
+        "frontend/src/pages/GalleryPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/ServicesPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-single-coherent-visual-theme-suitable-for-a-luxury-unisex-salon-colors-typography-spacing-imagery-style-and-enforce-it-consistently-across-all-pages-do-not-use-a-blue-purple-default-palette",
+      "featureTitle": "Apply a single, coherent visual theme suitable for a luxury unisex salon (colors, typography, spacing, imagery style) and enforce it consistently across all pages. Do not use a blue/purple default palette.",
+      "files": [
+        "frontend/src/components/branding/Section.tsx",
+        "frontend/src/components/layout/SiteLayout.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-home-page-content-must-prominently-present-salon-name-a-short-tagline-value-proposition-derived-from-the-provided-description-key-service-categories-hair-skin-nails-plus-emphasis-on-hair-treatment-and-hair-colour-and-a-clear-call-to-action-to-contact-call-and-or-book-via-dingg-app-as-an-external-link",
+      "featureTitle": "Home page content must prominently present: salon name, a short tagline/value proposition derived from the provided description, key service categories (hair, skin, nails; plus emphasis on hair treatment and hair colour), and a clear call-to-action to contact/call and/or book via dingg.app (as an external link).",
+      "files": [
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-about-page-must-include-the-provided-salon-description-text-edited-only-for-grammar-clarity-while-preserving-meaning-and-key-facts-location-area-mumbai-central-navjivan-society-and-areas-served-india",
+      "featureTitle": "About page must include the provided salon description text (edited only for grammar/clarity while preserving meaning) and key facts: location area (Mumbai Central, Navjivan Society), and “Areas served: India”.",
+      "files": [
+        "frontend/src/pages/AboutPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-services-page-must-present-salon-services-grouped-into-clear-sections-for-hair-skin-and-nails-including-a-highlighted-section-for-hair-treatments-and-hair-colour-with-tasteful-ui-cards-list-with-brief-descriptions",
+      "featureTitle": "Services page must present salon services grouped into clear sections for Hair, Skin, and Nails, including a highlighted section for Hair Treatments and Hair Colour, with tasteful UI (cards/list with brief descriptions).",
+      "files": [
+        "frontend/src/pages/ServicesPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-gallery-page-must-display-a-responsive-image-grid-with-lightbox-or-modal-preview-using-generated-placeholder-salon-imagery-until-real-photos-are-provided",
+      "featureTitle": "Gallery page must display a responsive image grid (with lightbox or modal preview) using generated placeholder salon imagery (until real photos are provided).",
+      "files": [
+        "frontend/src/pages/GalleryPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-contact-page-must-display-the-full-address-phone-number-click-to-call-hours-open-closes-9-pm-and-location-context-navjivan-commercial-premises-chs-mumbai-central-include-an-external-link-for-booking-services-to-dingg-app",
+      "featureTitle": "Contact page must display the full address, phone number (click-to-call), hours (“Open · Closes 9 pm”), and location context (“Navjivan Commercial Premises CHS”, “Mumbai Central”). Include an external link for booking/services to dingg.app.",
+      "files": [
+        "frontend/src/pages/ContactPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-shared-layout-components-header-nav-and-footer-including-consistent-branding-and-key-contact-info-phone-area-location-across-all-pages",
+      "featureTitle": "Add shared layout components (header/nav and footer) including consistent branding and key contact info (phone + area/location) across all pages.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/layout/Footer.tsx",
+        "frontend/src/components/layout/Header.tsx",
+        "frontend/src/components/layout/SiteLayout.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-and-integrate-required-static-images-as-generated-assets-under-frontend-public-assets-generated-and-use-them-consistently-hero-image-gallery-placeholders-and-simple-service-category-visuals",
+      "featureTitle": "Create and integrate required static images as generated assets under frontend/public/assets/generated, and use them consistently (hero image, gallery placeholders, and simple service category visuals).",
+      "files": [
+        "frontend/src/pages/GalleryPage.tsx",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/ServicesPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

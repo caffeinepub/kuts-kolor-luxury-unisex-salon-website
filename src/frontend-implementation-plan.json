@@ -1,0 +1,293 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "KUTS & KOLOR Luxury Unisex Salon — 5-page marketing site (frontend)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Implement a 5-page marketing site with client-side routing and top-level navigation for Home, About, Services, Gallery, and Contact.",
+      "acceptanceCriteria": [
+        "The site has 5 distinct pages: Home, About, Services, Gallery, Contact.",
+        "A persistent header/nav allows navigating to all 5 pages.",
+        "The active page/route is reflected in the URL and renders without full page reload."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the app shell with client-side routing (5 routes) and a shared layout wrapper so navigation updates the URL without full reload."
+        },
+        {
+          "path": "frontend/src/components/layout/SiteLayout.tsx",
+          "operation": "create",
+          "description": "Create a shared layout component that renders the persistent header/nav, page container, and footer; used by all routes."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "create",
+          "description": "Create the Home page route view and wire it into the router."
+        },
+        {
+          "path": "frontend/src/pages/AboutPage.tsx",
+          "operation": "create",
+          "description": "Create the About page route view and wire it into the router."
+        },
+        {
+          "path": "frontend/src/pages/ServicesPage.tsx",
+          "operation": "create",
+          "description": "Create the Services page route view and wire it into the router."
+        },
+        {
+          "path": "frontend/src/pages/GalleryPage.tsx",
+          "operation": "create",
+          "description": "Create the Gallery page route view and wire it into the router."
+        },
+        {
+          "path": "frontend/src/pages/ContactPage.tsx",
+          "operation": "create",
+          "description": "Create the Contact page route view and wire it into the router."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Confirm the document title and meta tags align with the 5-page marketing website branding."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Apply a consistent luxury salon theme (warm neutral palette, typography, spacing, responsive layouts) across all pages; avoid default blue/purple.",
+      "acceptanceCriteria": [
+        "All pages share the same design system (type scale, button styles, section spacing, and card styles).",
+        "The palette is not primarily blue/purple and feels “luxury salon” appropriate.",
+        "Layouts are responsive for mobile, tablet, and desktop."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create global Tailwind + theme tokens (CSS variables for shadcn-compatible colors) using warm neutrals and a premium accent (e.g., gold/bronze), plus consistent typography and section spacing utilities."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Adjust Tailwind theme extensions (fonts, container defaults, and any custom color tokens if needed) to support the luxury salon design system and responsive layouts."
+        },
+        {
+          "path": "frontend/src/components/layout/SiteLayout.tsx",
+          "operation": "modify",
+          "description": "Enforce consistent page structure (max-width container, vertical rhythm/section spacing) across all pages through the shared layout."
+        },
+        {
+          "path": "frontend/src/components/branding/Section.tsx",
+          "operation": "create",
+          "description": "Create a small reusable layout helper for consistent section spacing and headings across pages (compose with Tailwind classes; do not modify any ui library files)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Build Home page hero/content highlighting salon name, tagline/value proposition, key categories (Hair/Skin/Nails) with emphasis on hair treatments & hair colour, plus clear CTAs to call and/or book on dingg.app.",
+      "acceptanceCriteria": [
+        "Home page shows “KUTS & KOLOR Luxury Unisex Salon” prominently above the fold.",
+        "Home page includes service category highlights: Hair, Skin, Nails, and explicitly mentions hair treatments and hair colour expertise.",
+        "Home page contains at least one CTA that either initiates a phone call on mobile and/or links out to dingg.app."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Implement above-the-fold hero featuring “KUTS & KOLOR Luxury Unisex Salon”, a polished tagline derived from the provided description, key category highlights (Hair/Skin/Nails) with explicit emphasis on Hair Treatments + Hair Colour, and CTAs (tel: and external link to dingg.app). Use shadcn-ui components (e.g., Button, Card) for consistent premium UI. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/public/assets/generated/salon-hero.dim_1920x1080.png",
+          "operation": "create",
+          "description": "Add the required generated hero image asset and reference it from the Home page hero section."
+        },
+        {
+          "path": "frontend/public/assets/generated/service-icons-strip.dim_1200x300.png",
+          "operation": "create",
+          "description": "Add the required generated service icon strip asset and use it for Home category visuals (simple, consistent visuals without introducing a new icon library)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Create About page with the provided salon description (grammar/clarity edits only) and key facts: Mumbai Central/Navjivan Society location context and “Areas served: India”.",
+      "acceptanceCriteria": [
+        "About page includes an “About” section with the provided description (meaning preserved).",
+        "About page clearly states Mumbai Central / Navjivan Society location context.",
+        "About page includes “Areas served: India”."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/AboutPage.tsx",
+          "operation": "modify",
+          "description": "Add an About section containing the provided description text (edited only for grammar/clarity while preserving meaning), plus clearly presented key facts including Mumbai Central / Navjivan Society context and “Areas served: India”. Use shadcn-ui components (e.g., Card) for tasteful information layout. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Implement Services page with scannable, grouped sections for Hair, Skin, and Nails, emphasizing Hair Treatments and Hair Colour with tasteful UI.",
+      "acceptanceCriteria": [
+        "Services are grouped into Hair / Skin / Nails.",
+        "Hair Treatments and Hair Colour appear as emphasized offerings within Hair.",
+        "Each service group has readable, scannable presentation on mobile and desktop."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ServicesPage.tsx",
+          "operation": "modify",
+          "description": "Create grouped service sections (Hair/Skin/Nails) with brief descriptions in cards/lists, and add a visually emphasized subsection for Hair Treatments and Hair Colour within Hair. Use shadcn-ui components (e.g., Card) for consistent luxury styling. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/public/assets/generated/service-icons-strip.dim_1200x300.png",
+          "operation": "modify",
+          "description": "Ensure the service icon strip asset is used as the simple service category visual source on the Services page (e.g., cropped/positioned segments), keeping visuals consistent across the site."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Build Gallery page with a responsive image grid and modal/lightbox preview using generated placeholder salon images from static assets.",
+      "acceptanceCriteria": [
+        "Gallery page shows a responsive grid that adapts column count by viewport size.",
+        "Clicking/tapping an image opens a larger preview (modal/lightbox).",
+        "Gallery images are loaded from static assets under frontend/public/assets/generated (not from the backend)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/GalleryPage.tsx",
+          "operation": "modify",
+          "description": "Implement a responsive image grid sourced from generated static assets and add click-to-preview via a modal/lightbox. Use shadcn-ui Dialog (or equivalent) for the preview UI. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/public/assets/generated/gallery-01.dim_1200x900.png",
+          "operation": "create",
+          "description": "Add required generated gallery placeholder image 1 and use it in the Gallery grid."
+        },
+        {
+          "path": "frontend/public/assets/generated/gallery-02.dim_1200x900.png",
+          "operation": "create",
+          "description": "Add required generated gallery placeholder image 2 and use it in the Gallery grid."
+        },
+        {
+          "path": "frontend/public/assets/generated/gallery-03.dim_1200x900.png",
+          "operation": "create",
+          "description": "Add required generated gallery placeholder image 3 and use it in the Gallery grid."
+        },
+        {
+          "path": "frontend/public/assets/generated/gallery-04.dim_1200x900.png",
+          "operation": "create",
+          "description": "Add required generated gallery placeholder image 4 and use it in the Gallery grid."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Create Contact page with full address, click-to-call phone, hours, location context, and a clear external link to dingg.app.",
+      "acceptanceCriteria": [
+        "Contact page shows the full provided address exactly (allowing minor punctuation normalization only).",
+        "Phone number is rendered as a clickable tel: link and displayed as “091678 60528”.",
+        "Hours are displayed as “Open · Closes 9 pm” (use English formatting).",
+        "There is an external link to dingg.app labeled clearly (e.g., “Book on dingg.app”)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ContactPage.tsx",
+          "operation": "modify",
+          "description": "Add contact details: the full provided address (minor punctuation normalization only), phone displayed as “091678 60528” with a tel: link, hours displayed as “Open · Closes 9 pm”, location context lines (“Navjivan Commercial Premises CHS”, “Mumbai Central”), and a clearly labeled external link to dingg.app. Use shadcn-ui components (e.g., Button, Card) for clear hierarchy. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Add shared header/nav and footer with consistent branding and key contact/location info across all pages, responsive on small screens.",
+      "acceptanceCriteria": [
+        "Header appears on all pages and includes site name/brand and navigation links.",
+        "Footer appears on all pages and includes phone number and a short location line (Mumbai Central, Mumbai).",
+        "Layout remains usable on small screens (nav collapses or stacks appropriately)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/layout/Header.tsx",
+          "operation": "create",
+          "description": "Create a branded header with site name and navigation links to all 5 routes, including active-state styling; implement responsive behavior (collapse into a menu). Use shadcn-ui components (e.g., Button, Sheet/Dropdown) to implement the mobile nav pattern. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/layout/Footer.tsx",
+          "operation": "create",
+          "description": "Create a consistent footer including phone number and a short location line (Mumbai Central, Mumbai), plus optionally a booking link to dingg.app."
+        },
+        {
+          "path": "frontend/src/components/layout/SiteLayout.tsx",
+          "operation": "modify",
+          "description": "Wire Header and Footer into the shared layout so they appear on every page."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Ensure all routes render within the shared layout so header/footer are persistent across navigation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Integrate required generated static images under frontend/public/assets/generated and use them consistently for hero, gallery placeholders, and service visuals.",
+      "acceptanceCriteria": [
+        "All required generated images exist under frontend/public/assets/generated.",
+        "Home uses a hero image from the generated assets.",
+        "Gallery uses generated images; no backend image serving is introduced.",
+        "Service sections include simple visuals (icons/illustrations) sourced from generated assets."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/salon-hero.dim_1920x1080.png",
+          "operation": "modify",
+          "description": "Verify this generated hero image is present and referenced in the Home page hero design (static asset usage only)."
+        },
+        {
+          "path": "frontend/public/assets/generated/service-icons-strip.dim_1200x300.png",
+          "operation": "modify",
+          "description": "Verify this generated service icon strip is present and used for category visuals on Home/Services in a consistent style."
+        },
+        {
+          "path": "frontend/public/assets/generated/gallery-01.dim_1200x900.png",
+          "operation": "modify",
+          "description": "Verify this generated gallery image is present and included in the Gallery grid."
+        },
+        {
+          "path": "frontend/public/assets/generated/gallery-02.dim_1200x900.png",
+          "operation": "modify",
+          "description": "Verify this generated gallery image is present and included in the Gallery grid."
+        },
+        {
+          "path": "frontend/public/assets/generated/gallery-03.dim_1200x900.png",
+          "operation": "modify",
+          "description": "Verify this generated gallery image is present and included in the Gallery grid."
+        },
+        {
+          "path": "frontend/public/assets/generated/gallery-04.dim_1200x900.png",
+          "operation": "modify",
+          "description": "Verify this generated gallery image is present and included in the Gallery grid."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Ensure the hero background uses frontend/public/assets/generated/salon-hero.dim_1920x1080.png and category visuals use frontend/public/assets/generated/service-icons-strip.dim_1200x300.png."
+        },
+        {
+          "path": "frontend/src/pages/ServicesPage.tsx",
+          "operation": "modify",
+          "description": "Ensure service sections include simple visuals sourced from frontend/public/assets/generated/service-icons-strip.dim_1200x300.png (no new external icon dependencies)."
+        },
+        {
+          "path": "frontend/src/pages/GalleryPage.tsx",
+          "operation": "modify",
+          "description": "Ensure all gallery thumbnails/previews reference only the generated images under frontend/public/assets/generated and are not loaded from the backend."
+        }
+      ]
+    }
+  ]
+}

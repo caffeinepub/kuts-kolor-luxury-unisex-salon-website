@@ -1,0 +1,69 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-09T15:10:19.244Z",
+  "summary": "The diff implements a 5-route TanStack Router SPA with shared header/footer and pages for Home, About, Services, Gallery (with modal lightbox), and Contact. A warm neutral + gold theme is introduced via Tailwind/CSS variables. However, required generated static image assets are not evidenced as being added, and service/category visuals are implemented with lucide-react icons rather than the requested generated icon strip.",
+  "missing_requirements": [
+    {
+      "id": "REQ-9",
+      "requirement": "Create and integrate required static images as generated assets under frontend/public/assets/generated, and use them consistently (hero image, gallery placeholders, and simple service category visuals).",
+      "reason": "Pages reference files under /assets/generated, but the diff summary does not show any added files under frontend/public/assets/generated, and the service category visuals are implemented using lucide-react icons rather than the requested generated icon strip/sprite.",
+      "evidence": [
+        "frontend/src/pages/HomePage.tsx (references '/assets/generated/salon-hero.dim_1920x1080.png' and uses lucide-react icons)",
+        "frontend/src/pages/GalleryPage.tsx (references '/assets/generated/gallery-01..04.dim_1200x900.png')",
+        "frontend/src/pages/ServicesPage.tsx (uses lucide-react icons; no generated icon strip usage shown)",
+        "frontend-file-summaries.txt (no mention of adding frontend/public/assets/generated files)"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Footer includes 'Built with caffeine.ai' attribution and UTM-tracked external link.",
+      "reason": "BuildRequest does not ask for any site-builder attribution or outbound marketing/tracking links.",
+      "evidence": [
+        "frontend/src/components/layout/Footer.tsx"
+      ]
+    },
+    {
+      "description": "Introduced Internet Identity authentication context and actor/query hooks even though authentication is not required for this marketing website.",
+      "reason": "BuildRequest explicitly says Internet Identity is not required for this website; adding auth plumbing is extra functionality beyond requested marketing pages.",
+      "evidence": [
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts"
+      ]
+    },
+    {
+      "description": "Added an empty Motoko backend canister actor.",
+      "reason": "BuildRequest is entirely frontend marketing-site focused and does not request backend changes or a new backend canister entry point.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "confidence": 0.72,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/branding/Section.tsx",
+    "frontend/src/components/layout/Footer.tsx",
+    "frontend/src/components/layout/Header.tsx",
+    "frontend/src/components/layout/SiteLayout.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/AboutPage.tsx",
+    "frontend/src/pages/ContactPage.tsx",
+    "frontend/src/pages/GalleryPage.tsx",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/ServicesPage.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

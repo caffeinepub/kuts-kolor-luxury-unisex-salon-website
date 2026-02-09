@@ -1,2 +1,3 @@
-# kuts-kolor-luxury-unisex-salon-website
-Exported from Caffeine project: KUTS &amp; KOLOR Luxury Unisex Salon Website
+## KUTS &amp; KOLOR Luxury Unisex Salon Website
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`
